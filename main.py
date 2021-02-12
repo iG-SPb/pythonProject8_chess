@@ -99,6 +99,9 @@ if __name__ == '__main__':
         y = generate_y()
         if x is None or y is None or start_init:
             array_initialization()
+            x = generate_x()
+            y = generate_y()
+            array_xy[x][y] = "X"
         else:
             array_xy[x][y] = "X"
         if check_diagonal():
