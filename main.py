@@ -72,6 +72,7 @@ def check_diagonal():
                 break
             else:
                 # прямая диагональ
+                # print(i, (i + k), "---", (i+k), i)
                 if array_xy[i][i + k] == "X":
                     count_symbol1 += 1
                     if count_symbol1 == 2:
@@ -81,11 +82,12 @@ def check_diagonal():
                     if count_symbol2 == 2:
                         return False
                 # обратная диагональ
+                # print(i, (num_column - i - k - 1), "-", (k + i), (num_column - i - 1))
                 if array_xy[i][num_column - i - k - 1] == "X":
                     count_symbol3 += 1
                     if count_symbol3 == 2:
                         return False
-                if array_xy[num_column - i - k - 1][i] == "X":
+                if array_xy[k + i][num_column - i - 1] == "X":
                     count_symbol4 += 1
                     if count_symbol4 == 2:
                         return False
